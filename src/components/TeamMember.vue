@@ -1,4 +1,5 @@
 <script setup>
+
 defineProps({
     name:String,
     email:String,
