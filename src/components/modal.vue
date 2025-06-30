@@ -6,6 +6,12 @@ defineProps({
 </script>
 
 <template >
+    <Transition
+    enter-from-class="transition duration-1000 opacity-0"
+    enter-to-class="transition duration-1000 opacity-100"
+     leave-from-class="transition duration-1000 opacity-100"
+     leave-to-class="transition duration-1000 opacity-0"
+    >
     <div v-if="show" class="modal-mask">
     <div class="modal-container">
     
@@ -21,6 +27,7 @@ defineProps({
     </footer>
     </div>
     </div>
+    </Transition>
 </template>
 
 <style>
