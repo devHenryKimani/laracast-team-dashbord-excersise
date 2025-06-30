@@ -7,7 +7,10 @@ let team = useTeamStore();
     <header class="flex justify-between">
     {{ team?.members?.length }}
     <div>
-      <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded disabled:bg-gray-400" :disabled="team.members.length == team.spots">Add Member ({{(team.spots.length)-(team.members.length ) }} Spots Left)</button>
+      <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded disabled:bg-gray-400"
+       :disabled="team.members.length == team.spots"
+       @click="$emit('add')"
+       >Add Member ({{(team.spots.length)-(team.members.length ) }} Spots Left)</button>
     </div>
     <div>
       <div class="inline-flex items-center text-3xl relative">
